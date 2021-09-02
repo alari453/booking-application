@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "webserver" do |webserver|
     # Options for the webserver VM
     webserver.vm.hostname = "webserver"
-
+    config.vm.boot_timeout = 3200
     # So that our host computer can connect to IP address 127.0.0.1 port 8080, and that network
     # request will reach our webserver VM's port 80.
     webserver.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
