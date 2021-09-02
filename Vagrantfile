@@ -28,8 +28,8 @@ Vagrant.configure("2") do |config|
   end
 
   # Define a named VM
-  config.vm.define "bookingserver" do |bookingserver|
-    webserver.vm.hostname = "bookingserver"
+  config.vm.define "adminserver" do |adminserver|
+    webserver.vm.hostname = "adminserver"
 
     # So that our host computer can connect to IP address 127.0.0.1 port 8080, and that network
     # request will reach our webserver VM's port 80.
@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
     webserver.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
 
     # For ease of editing as shell commands are in different file
-    webserver.vm.provision "shell", path: "bookingserver.sh"
+    webserver.vm.provision "shell", path: "adminserver.sh"
 
   # End webserver
   end
