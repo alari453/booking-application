@@ -2,7 +2,7 @@
   apt-get update
   
   # We create a shell variable MYSQL_PWD that contains the MySQL root password
-  export MYSQL_PWD='password1234'
+  export MYSQL_PWD='password1234' #root password
   
   echo "mysql-server mysql-server/root_password password $MYSQL_PWD" | debconf-set-selections 
   echo "mysql-server mysql-server/root_password_again password $MYSQL_PWD" | debconf-set-selections
@@ -23,7 +23,7 @@
   export MYSQL_PWD='password1234'
   
   # Connects user and database
-  cat /vagrant/setup-database.sql | mysql -u webuser fvision
+  cat /vagrant/setup-database.sql | mysql -u user1 bookings
 
   # By default, MySQL only listens for local network requests,
       # i.e., that originate from within the dbserver VM. We need to
