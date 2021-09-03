@@ -12,13 +12,13 @@
   
   # Run some setup commands to get the database ready to use.
   # First create a database.
-  echo "CREATE DATABASE 349assignment1;" | mysql
+  echo "CREATE DATABASE bookings;" | mysql
  
   # Create a database user "user1" with the given password.
   echo "CREATE USER 'user1'@'%' IDENTIFIED BY 'password1234';" | mysql
   
   # Grant all permissions to the database user "user1".
-  echo "GRANT ALL PRIVILEGES ON 349assignment.* TO 'user1'@'%'" | mysql
+  echo "GRANT ALL PRIVILEGES ON bookings.* TO 'user1'@'%'" | mysql
   
   export MYSQL_PWD='password1234'
   
