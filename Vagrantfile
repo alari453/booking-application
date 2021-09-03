@@ -31,20 +31,20 @@ Vagrant.configure("2") do |config|
 
   # Define a named VM
   config.vm.define "adminserver" do |adminserver|
-    webserver.vm.hostname = "adminserver"
+    adminserver.vm.hostname = "adminserver"
 
     # So that our host computer can connect to IP address 127.0.0.1 port 8080, and that network
     # request will reach our webserver VM's port 80.
-    webserver.vm.network "forwarded_port", guest: 80, host: 8081, host_ip: "127.0.0.1"
+    adminserver.vm.network "forwarded_port", guest: 80, host: 8081, host_ip: "127.0.0.1"
    
     # Private network that our VMs will use to communicate
-    webserver.vm.network "private_network", ip: "192.168.2.12"
+    adminserver.vm.network "private_network", ip: "192.168.2.12"
     
     # Necessary in the CS Labs
-    webserver.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
+    adminserver.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
 
     # For ease of editing as shell commands are in different file
-    webserver.vm.provision "shell", path: "adminserver.sh"
+    adminserver.vm.provision "shell", path: "adminserver.sh"
 
   # End webserver
   end
