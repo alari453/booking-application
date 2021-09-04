@@ -2,7 +2,8 @@
   apt-get update
   
   # We create a shell variable MYSQL_PWD that contains the MySQL root password
-  export MYSQL_PWD='password1234'
+  #ROOT PASSWORD
+  export MYSQL_PWD='password123'
   
   echo "mysql-server mysql-server/root_password password $MYSQL_PWD" | debconf-set-selections 
   echo "mysql-server mysql-server/root_password_again password $MYSQL_PWD" | debconf-set-selections
