@@ -24,7 +24,7 @@
   export MYSQL_PWD='password1234'
   
   # Connects user and database
-  cat /vagrant/setup-database.sql | mysql -u webuser fvision
+  cat /vagrant/setup-database.sql | mysql -u user1 bookings
 
   # By default, MySQL only listens for local network requests,
       # i.e., that originate from within the dbserver VM. We need to
