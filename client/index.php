@@ -1,15 +1,16 @@
+<!--Send Data to View-->
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8">
-        <title>COSC vs. INFO</title>
+        <title>Mars Flight Booking</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
-    <!--SURVEY FORM-->
+    <!--Booking Form:-->
     <div class="container">
         <div id="header1">
-            <h1>COSC vs INFO Course Survey</h1>
+            <h1>Mars Flight Bookings</h1>
         </div>
         <form method="post" action ="" class="inputForm">
             <label for="studentID">Student ID:</label>
@@ -37,14 +38,14 @@
     </div>
 
     <?php 
-        /* connecting to the databse */
+        /* connect to databse */
         $link = mysqli_connect('192.168.10.12', 'user1', 'password1', '349assignment');
         if (mysqli_connect_errno()){
             echo "Failed to connect to MQL: " . mysqli_connect_error();
             exit();
         }
 
-        /* initialising parameters to post to db */
+        /* initialise parameters to post to db */
         $studentID = $_POST['studentID'];
         $name = $_POST['name'];
         $course = $_POST['course'];
@@ -52,11 +53,11 @@
         $paper = $_POST['paper'];
         $language = $_POST['language'];   
 
-        /* preparing insert statement */
+        /* insert statement */
         $statement = mysqli_prepare( $link, "INSERT INTO information (studentID, name, course, lecturer, paper, language) 
         VALUES (?, ?, ?, ?, ?, ?)");
         
-        /* if valid, bind parameters, execute statement and then finish */
+        /* if paramaters are valid, execute statement and then finish */
         if ($statement) {
             mysqli_stmt_bind_param( $statement, "ssssss", $studentID, $name, $course, $lecturer, $paper, $language);
             mysqli_stmt_execute($statement);
