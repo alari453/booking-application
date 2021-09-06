@@ -20,8 +20,8 @@
   <h1>Mars Booking Details</h1>
   <p>Current Bookings to Mars:</p> <!--Testing Purposes-->
 
-        <table border="2">
-        <tr><th>USERID</th><th>GROUP NAME</th><th>BOOKING TIME</th></tr>
+        <table border="5">
+        <tr><th>USERID</th><th>BOOKING NAME</th><th>BOOKING TIME</th></tr>
 
         <!--Call information from the database:-->
         <?php

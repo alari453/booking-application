@@ -37,7 +37,7 @@ INSERT INTO details VALUES ('Mike', 'Cui', 'cuimi@student.otago.ac.nz');
 INSERT INTO details VALUES ('Scott', 'Smith', 'smisc@student.otago.ac.nz');
 INSERT INTO details VALUES ('Maura', 'Higgins', 'higma53@student.otago.ac.nz');
 
-INSERT INTO schedule VALUES ('420', 'CUI', '13:00');
-INSERT INTO schedule VALUES ('42069', 'ALAGH','14:00');
-INSERT INTO schedule VALUES ('42070', 'SMITH', '15:00');
-INSERT INTO schedule VALUES ('42071', 'HIGGINS','16:00');
+INSERT INTO schedule VALUES ('420', 'Cui', '13:00');
+INSERT INTO schedule VALUES ('42069', 'Alagh','14:00');
+INSERT INTO schedule VALUES ('42070', 'Smith', '15:00');
+INSERT INTO schedule VALUES ('42071', 'Higgins','16:00');
