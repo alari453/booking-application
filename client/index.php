@@ -27,6 +27,9 @@
             <label for="Email">Email:</label>
             <input class="submitBooking" type="text" name="Email" placeholder="e.g. doeja@student.otago.ac.nz" required><br>
 
+            <label for="preferredTime">Preferred Time:</label>
+            <input class="submitBooking" type="text" name="preferredTime" placeholder="e.g. 13:00" required><br>
+
             <input class="submitBooking" type="submit" name="submit"></input>
         </form>
 
@@ -43,15 +46,16 @@
         /* initialise parameters to post to db */
         $FName = $_POST['FName'];
         $LName = $_POST['LName'];
-        $Email = $_POST['Email'];   
+        $Email = $_POST['Email'];  
+        $preferredTime = $_POST['preferredTime'];    
 
         /* insert statement */
-        $statement = mysqli_prepare( $link, "INSERT INTO details (FName, LName, Email) 
-        VALUES (?, ?, ?)");
+        $statement = mysqli_prepare( $link, "INSERT INTO details (FName, LName, Email, preferredTime) 
+        VALUES (?, ?, ?, ?)");
         
         /* if paramaters are valid, execute statement and then finish */
         if ($statement) {
-            mysqli_stmt_bind_param( $statement, "????", $FName, $LName, $Email);
+            mysqli_stmt_bind_param( $statement, "????", $FName, $LName, $Email, $preferredTime);
             mysqli_stmt_execute($statement);
             mysqli_stmt_close($statement);
         } else {

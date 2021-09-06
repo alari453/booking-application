@@ -2,10 +2,11 @@
 DROP TABLE IF EXISTS detailstest;
 -- CREATE TABLE detailstest (
 --     FName varchar(25) NOT NULL, 
---     LName varchar(25) NOT NULL
---     Email varchar(100) NOT NULL
+--     LName varchar(25) NOT NULL,
+--     Email varchar(100) NOT NULL,
+--     preferredTime varchar(10) NOT NULL
 -- );
--- INSERT INTO detailstest VALUES ('RIYA', 'ALAGH');
+-- INSERT INTO detailstest VALUES ('RIYA', 'ALAGH', 'alari@student.otago.ac.nz', '12:00');
 -- INSERT INTO detailstest VALUES ('MIKE', 'CUI');
 
 DROP TABLE IF EXISTS scheduletest;
@@ -23,19 +24,20 @@ DROP TABLE IF EXISTS schedule;
 CREATE TABLE details ( -- user details
   FName varchar(25) NOT NULL, 
   LName varchar(25) NOT NULL, 
-  Email varchar(100) NOT NULL
+  Email varchar(100) NOT NULL,
+  preferredTime varchar(10) NOT NULL UNIQUE
 );
 
 CREATE TABLE schedule (
   bookingID INTEGER(10) NOT NULL, 
-  bookingName varchar(10) NOT NULL, -- booking/group reference name
+  bookingName varchar(10) NOT NULL, -- booking/group reference name, LName
   time varchar(10) NOT NULL UNIQUE
 );
 
-INSERT INTO details VALUES ('Riya', 'Alagh', 'alari@student.otago.ac.nz');
-INSERT INTO details VALUES ('Mike', 'Cui', 'cuimi@student.otago.ac.nz');
-INSERT INTO details VALUES ('Scott', 'Smith', 'smisc@student.otago.ac.nz');
-INSERT INTO details VALUES ('Maura', 'Higgins', 'higma53@student.otago.ac.nz');
+INSERT INTO details VALUES ('Riya', 'Alagh', 'alari@student.otago.ac.nz', '12:00');
+INSERT INTO details VALUES ('Mike', 'Cui', 'cuimi@student.otago.ac.nz', '13:00');
+INSERT INTO details VALUES ('Scott', 'Smith', 'smisc@student.otago.ac.nz', '14:00');
+INSERT INTO details VALUES ('Maura', 'Higgins', 'higma53@student.otago.ac.nz', '15:00');
 
 INSERT INTO schedule VALUES ('420', 'Cui', '13:00');
 INSERT INTO schedule VALUES ('42069', 'Alagh','14:00');
