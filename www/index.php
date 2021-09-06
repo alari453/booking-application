@@ -1,7 +1,7 @@
 <!--To display data:-->
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
-<head><title>Mars Booking Details</title>
+<head><title>Mars Reservation Booking Details</title>
     <style>
     th { text-align: left; }
 
@@ -37,7 +37,7 @@
         $q = $pdo->query("SELECT * FROM schedule");
 
         while($row = $q->fetch()){
-          echo "<tr><td>".$row["bookingID"]."</td><td>".$row["groupName"]."</td><td>".$row["time"]."</td></tr>\n";
+          echo "<tr><td>".$row["bookingID"]."</td><td>".$row["bookingName"]."</td><td>".$row["time"]."</td></tr>\n";
         }
         ?>
 

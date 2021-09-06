@@ -10,7 +10,7 @@
     <!--Booking Form:-->
     <div class="container">
         <div id="header1">
-            <h1>Mars Flight Bookings</h1>
+            <h1>Mars Reservation Flight Bookings</h1>
         </div>
         <form method="post" action ="" class="inputForm">
             <label for="studentID">Student ID:</label>
