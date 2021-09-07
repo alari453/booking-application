@@ -19,16 +19,16 @@
         <!--User Input-->
         <form method="post" action ="insert.php" class="inputForm">
             <label for="fName">First Name:</label>
-            <input class="submitBooking" type="text" name="FName" placeholder="e.g. Jane" value="John" required><br>
+            <input class="submitBooking" type="text" name="fName" placeholder="e.g. Jane"  required><br>
 
             <label for="lName">Last Name:</label>
-            <input class="submitBooking" type="text" name="LName" placeholder="e.g. Doe" value="John" required><br>
+            <input class="submitBooking" type="text" name="lName" placeholder="e.g. Doe"  required><br>
 
             <label for="email">Email:</label>
-            <input class="submitBooking" type="text" name="Email" placeholder="e.g. doeja@student.otago.ac.nz" value="John" required><br>
+            <input class="submitBooking" type="text" name="email" placeholder="e.g. doeja@student.otago.ac.nz" required><br>
 
             <label for="time">Preferred Time:</label>
-            <input class="submitBooking" type="text" name="preferredTime" placeholder="e.g. 13:00" value="John" required><br>
+            <input class="submitBooking" type="text" name="time" placeholder="e.g. 13:00" required><br>
 
             <input class="bookingSubmit" type="submit" name="submit"></input>
         </form>
