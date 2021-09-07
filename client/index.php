@@ -19,18 +19,18 @@
         <!--User Input-->
         <form method="post" action ="" class="inputForm">
             <label for="fName">First Name:</label>
-            <input class="submitBooking" type="text" name="FName" placeholder="e.g. Jane" required><br>
+            <input class="submitBooking" type="text" name="FName" placeholder="e.g. Jane" value="John" required><br>
 
             <label for="lName">Last Name:</label>
-            <input class="submitBooking" type="text" name="LName" placeholder="e.g. Doe" required><br>
+            <input class="submitBooking" type="text" name="LName" placeholder="e.g. Doe" value="John" required><br>
 
             <label for="email">Email:</label>
-            <input class="submitBooking" type="text" name="Email" placeholder="e.g. doeja@student.otago.ac.nz" required><br>
+            <input class="submitBooking" type="text" name="Email" placeholder="e.g. doeja@student.otago.ac.nz" value="John" required><br>
 
             <label for="time">Preferred Time:</label>
-            <input class="submitBooking" type="text" name="preferredTime" placeholder="e.g. 13:00" required><br>
+            <input class="submitBooking" type="text" name="preferredTime" placeholder="e.g. 13:00" value="John" required><br>
 
-            <input class="submitBooking" type="submit" name="submit"></input>
+            <input class="bookingSubmit" type="submit" name="submit"></input>
         </form>
 
     </div>
@@ -59,8 +59,6 @@
             mysqli_stmt_bind_param( $statement, "ssss", $fName, $lName, $email, $time);
             mysqli_stmt_execute($statement);
             mysqli_stmt_close($statement);
-            console.log($statement);
-           
         } else {
             echo "<script>alert(Didn't work. Program has quit.)</script>";
         }
