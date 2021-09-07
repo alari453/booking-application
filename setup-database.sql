@@ -1,13 +1,18 @@
 DROP TABLE IF EXISTS schedule;
 
-
-CREATE TABLE schedule (
+/*information table for user's inpur*/
+CREATE TABLE schedule(
   bookingID INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
   fName varchar(25) NOT NULL, 
   lName varchar(25) NOT NULL, 
   email varchar(100) NOT NULL, 
   time varchar(10) NOT NULL UNIQUE
-)AUTO_INCREMENT=1000;
+) 
+
+/*auto generate/increment id number starting from 1000*/
+AUTO_INCREMENT=1000;
+
+/*initial databse information*/
 INSERT INTO schedule (fName, lName, email, time)
              VALUES ('Riya', 'Alagh', 'alari@student.otago.ac.nz', '13:00');
 INSERT INTO schedule(fName, lName, email, time)
