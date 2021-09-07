@@ -22,5 +22,6 @@
         /* close db connection */
         
 ?>
+
 <a class="currentBookings" href="http://192.168.2.12"> View Current Bookings</a>
 <a class="currentBookings" href="http://192.168.2.11"> Make another booking</a>
