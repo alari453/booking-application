@@ -18,16 +18,16 @@
 
         <!--User Input-->
         <form method="post" action ="" class="inputForm">
-            <label for="FName">First Name:</label>
+            <label for="fName">First Name:</label>
             <input class="submitBooking" type="text" name="FName" placeholder="e.g. Jane" required><br>
 
-            <label for="LName">Last Name:</label>
+            <label for="lName">Last Name:</label>
             <input class="submitBooking" type="text" name="LName" placeholder="e.g. Doe" required><br>
 
-            <label for="Email">Email:</label>
+            <label for="email">Email:</label>
             <input class="submitBooking" type="text" name="Email" placeholder="e.g. doeja@student.otago.ac.nz" required><br>
 
-            <label for="preferredTime">Preferred Time:</label>
+            <label for="time">Preferred Time:</label>
             <input class="submitBooking" type="text" name="preferredTime" placeholder="e.g. 13:00" required><br>
 
             <input class="submitBooking" type="submit" name="submit"></input>
@@ -44,10 +44,10 @@
         }
 
         /* initialise parameters to post to db */
-        $FName = $_POST['FName'];
-        $LName = $_POST['LName'];
-        $Email = $_POST['Email'];  
-        $preferredTime = $_POST['preferredTime'];    
+        $fName = $_POST['fName'];
+        $lName = $_POST['lName'];
+        $email = $_POST['email'];  
+        $time = $_POST['time'];    
 
         /* insert statement */
         $statement = mysqli_prepare( $link, "INSERT INTO schedule (fName, lName, email, time) 
@@ -55,12 +55,14 @@
         
         /* if paramaters are valid, execute statement and then finish */
         if ($statement) {
-            mysqli_stmt_bind_param( $statement, "????", $FName, $LName, $Email, $preferredTime);
+            
+            mysqli_stmt_bind_param( $statement, "ssss", $fName, $lName, $email, $time);
             mysqli_stmt_execute($statement);
             mysqli_stmt_close($statement);
-            echo '<script>alert("Booking successful")</script>';
+            console.log($statement);
+           
         } else {
-            echo "Didn't work. Program has quit.";
+            echo "<script>alert(Didn't work. Program has quit.)</script>";
         }
 
         /* close db connection */
