@@ -21,7 +21,7 @@
   <p>Current Bookings to Mars:</p> <!--Testing Purposes-->
 
         <table border="5">
-        <tr><th>USERID</th><th>BOOKING NAME</th><th>BOOKING TIME</th></tr>
+        <tr><th>BOOKINGID</th><th>FIRST NAME</th><th>LAST NAME</th><th>BOOKING TIME</th></tr>
 
         <!--Call information from the database:-->
         <?php
@@ -37,7 +37,7 @@
         $q = $pdo->query("SELECT * FROM schedule");
 
         while($row = $q->fetch()){
-          echo "<tr><td>".$row["bookingID"]."</td><td>".$row["bookingName"]."</td><td>".$row["time"]."</td></tr>\n";
+          echo "<tr><td>".$row["bookingID"]."</td><td>".$row["fName"]."</td><td>".$row["lName"]."</td><td>".$row["time"]."</td></tr>\n";
         }
         ?>
 
