@@ -14,7 +14,7 @@
         </div>
         
         <!--to display current bookings (www-index page) CHANGE HREF-->
-        <a class="currentBookings" href="http://192.168.10.13"> View Current Bookings</a>
+        <a class="currentBookings" href="http://192.168.2.12"> View Current Bookings</a>
 
         <!--User Input-->
         <form method="post" action ="" class="inputForm">
@@ -37,7 +37,7 @@
 
     <?php 
         /* connect to databse */
-        $link = mysqli_connect('192.168.10.12', 'user1', 'password1234', 'bookings');
+        $link = mysqli_connect('192.168.2.13', 'user1', 'password1234', 'bookings');
         if (mysqli_connect_errno()){
             echo "Failed to connect to MQL: " . mysqli_connect_error();
             exit();
@@ -50,7 +50,7 @@
         $preferredTime = $_POST['preferredTime'];    
 
         /* insert statement */
-        $statement = mysqli_prepare( $link, "INSERT INTO details (FName, LName, Email, preferredTime) 
+        $statement = mysqli_prepare( $link, "INSERT INTO schedule (fName, lName, email, time) 
         VALUES (?, ?, ?, ?)");
         
         /* if paramaters are valid, execute statement and then finish */
@@ -58,8 +58,9 @@
             mysqli_stmt_bind_param( $statement, "????", $FName, $LName, $Email, $preferredTime);
             mysqli_stmt_execute($statement);
             mysqli_stmt_close($statement);
+            echo '<script>alert("Booking successful")</script>';
         } else {
-            echo "Didn't work. Quit.";
+            echo "Didn't work. Program has quit.";
         }
 
         /* close db connection */
