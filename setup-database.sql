@@ -1,45 +1,19 @@
-/*initial data for for testing the database*/
-DROP TABLE IF EXISTS detailstest;
--- CREATE TABLE detailstest (
---     FName varchar(25) NOT NULL, 
---     LName varchar(25) NOT NULL,
---     Email varchar(100) NOT NULL,
---     preferredTime varchar(10) NOT NULL
--- );
--- INSERT INTO detailstest VALUES ('RIYA', 'ALAGH', 'alari@student.otago.ac.nz', '12:00');
--- INSERT INTO detailstest VALUES ('MIKE', 'CUI');
-
-DROP TABLE IF EXISTS scheduletest;
--- CREATE TABLE scheduletest (
---     bookingID INTEGER(10) NOT NULL, 
---     bookingName varchar(10) NOT NULL
--- );
--- INSERT INTO detailstest VALUES ('1', 'ALAGH');
--- INSERT INTO detailstest VALUES ('2', 'CUI');
-
-/*database table for bookings*/
 DROP TABLE IF EXISTS details;
 DROP TABLE IF EXISTS schedule;
 
-CREATE TABLE details ( -- user details
-  FName varchar(25) NOT NULL, 
-  LName varchar(25) NOT NULL, 
-  Email varchar(100) NOT NULL,
-  preferredTime varchar(10) NOT NULL UNIQUE
-);
 
 CREATE TABLE schedule (
-  bookingID INTEGER(10) NOT NULL, 
-  bookingName varchar(10) NOT NULL, -- booking/group reference name, LName
+  bookingID INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  fName varchar(25) NOT NULL, 
+  lName varchar(25) NOT NULL, 
+  email varchar(100) NOT NULL, 
   time varchar(10) NOT NULL UNIQUE
-);
-
-INSERT INTO details VALUES ('Riya', 'Alagh', 'alari@student.otago.ac.nz', '12:00');
-INSERT INTO details VALUES ('Mike', 'Cui', 'cuimi@student.otago.ac.nz', '13:00');
-INSERT INTO details VALUES ('Scott', 'Smith', 'smisc@student.otago.ac.nz', '14:00');
-INSERT INTO details VALUES ('Maura', 'Higgins', 'higma53@student.otago.ac.nz', '15:00');
-
-INSERT INTO schedule VALUES ('420', 'Cui', '13:00');
-INSERT INTO schedule VALUES ('42069', 'Alagh','14:00');
-INSERT INTO schedule VALUES ('42070', 'Smith', '15:00');
-INSERT INTO schedule VALUES ('42071', 'Higgins','16:00');
+)AUTO_INCREMENT=1000;
+INSERT INTO schedule (fName, lName, email, time)
+             VALUES ('Riya', 'Alagh', 'alari@student.otago.ac.nz', '13:00');
+INSERT INTO schedule(fName, lName, email, time)
+              VALUES ('Mike', 'Cui', 'cuimi@student.otago.ac.nz','14:00');
+INSERT INTO schedule(fName, lName, email, time)
+              VALUES ('Scott', 'Smith', 'smisc@student.otago.ac.nz', '15:00');
+INSERT INTO schedule(fName, lName, email, time)
+              VALUES ('Maura', 'Higgins', 'higma53@student.otago.ac.nz','16:00');
