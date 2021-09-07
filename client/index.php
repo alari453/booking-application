@@ -26,8 +26,8 @@
                 <label for="email">Email:</label>
                 <input class="submitBooking" type="text" name="email" placeholder="e.g. doeja@student.otago.ac.nz" required><br>
 
-                <label for="time">Preferred Time:</label>
-                <input class="submitBooking" type="text" name="time" placeholder="e.g. 13:00" required><br>
+                <label for="bookingtTime">Preferred Time:</label>
+                <input class="submitBooking" type="text" name="bookingtTime" placeholder="e.g. 13:00" required><br>
 
                 <input class="bookingSubmit" type="submit" name="submit"></input>
             </form>

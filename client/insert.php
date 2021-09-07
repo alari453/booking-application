@@ -11,10 +11,10 @@
         $fName = mysqli_real_escape_string($link, $_REQUEST['fName']);
         $lName = mysqli_real_escape_string($link, $_REQUEST['lName']);
         $email = mysqli_real_escape_string($link, $_REQUEST['email']);
-        $time = mysqli_real_escape_string($link, $_REQUEST['time']);
+        $bookingtTime = mysqli_real_escape_string($link, $_REQUEST['bookingtTime']);
 
         /* insert information from index to database */
-        $sql = "INSERT INTO schedule (fName, lName, email, time) VALUES ('$fName', '$lName', '$email', '$time')";
+        $sql = "INSERT INTO schedule (fName, lName, email, bookingtTime) VALUES ('$fName', '$lName', '$email', '$bookingtTime')";
         if(mysqli_query($link, $sql)){
             echo "Records added successfully. Choose one of the following options: </br>";
         } else{
