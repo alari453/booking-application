@@ -29,10 +29,10 @@ AUTO_INCREMENT=1000; -- auto generate/increment bookingID number starting from 1
 
 /*initial databse information*/
 INSERT INTO schedule (fName, lName, email, bookingtTime)
-             VALUES ('Riya', 'Alagh', 'alari@student.otago.ac.nz', '13:00');
+             VALUES ('Candice', 'Alagh', 'alari@student.otago.ac.nz', '13:00');
 INSERT INTO schedule(fName, lName, email, bookingtTime)
-              VALUES ('Mike', 'Cui', 'cuimi@student.otago.ac.nz','14:00');
+              VALUES ('Ligma', 'Cui', 'cuimi@student.otago.ac.nz','14:00');
 INSERT INTO schedule(fName, lName, email, bookingtTime)
-              VALUES ('Scott', 'Smith', 'smisc@student.otago.ac.nz', '15:00');
+              VALUES ('Imagine', 'Dragons', 'smisc@student.otago.ac.nz', '15:00');
 INSERT INTO schedule(fName, lName, email, bookingtTime)
-              VALUES ('Maura', 'Higgins', 'higma53@student.otago.ac.nz','16:00');
+              VALUES ('Sugma', 'Higgins', 'higma53@student.otago.ac.nz','16:00');

@@ -8,7 +8,7 @@ html {
 }
 
 h1 {
-    margin: 0;
+    width: 1000px;
 }
 
 .container {
@@ -28,36 +28,4 @@ label {
     display: inline-block;
     width: 160px;
     text-align: left;
-}
-
-.surveyInput, select.surveyInput {
-    padding: 5px;
-    width: 40%;
-    clear: both;
-    border-radius: 5px;
-    border: 1px solid black;
-    margin: 5px 0 15px 0;
-    max-width: 250px;
-}
-
-.surveySubmit {
-    background-color: #4CAF50;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 7px;
-    color: #fff;
-    width: 80px;
-    margin: 0 auto 20px auto;
-}
-
-.surveySubmit:hover{
-    background-color:#fff;
-    color: #4CAF50;
-    border: 1px solid black;
-    cursor: pointer;
-}
-
-.surveyInput:focus {
-    outline: none;
-    box-shadow: 2px 2px #4CAF50;
 }

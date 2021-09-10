@@ -2,12 +2,14 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
   <head>
-    <title>Mars Reservation Booking Details</title>
+      <meta charset="utf-8">
+      <title>Mars Reservation Flight Booking Details</title>
+      <link rel="stylesheet" href="style.css">
       <!--table styling-->
       <style>
       th { text-align: left; }
       table, th, td {
-        border: 5px solid grey;
+        border: 3px solid grey;
         border-collapse: collapse;}
       th, td {
         padding: 0.5em;}
@@ -15,7 +17,10 @@
   </head>
 
   <body>
-    <h1>Mars Reservation Booking Details</h1>
+  <div class="container">
+          <div id="header1">
+            <h1>Mars Reservation Booking Details</h1>
+          </div>
     <h2>Current Bookings to Mars:</h2>
 
           <table border="5">
