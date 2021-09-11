@@ -6,7 +6,7 @@ INTRODUCTION:
 This application is a booking system that utilizes three virtual machines that interact with one another. 
 The first VM hosts a booking form for a user’s input, the second displays the current bookings, and the third VM runs a database.
 
-HOW TO USE APPLICATION:
+HOW TO RUN THE APPLICATION:
 Assuming the user has the latest version of Vagrant and VirtualBox, running this application is fairly easy. First, the repository will need to be downloaded or cloned. To clone the repository in the terminal, use the command: 
 
 https://github.com/alari453/booking-application.git
@@ -15,7 +15,7 @@ Once this is complete, you can then navigate through the terminal into the direc
 	
 vagrant up --provider virtualbox
 
-When the virtual machines are running, you can then open the web pages hosted by the appropriate VM’s by the following URLs:
+When the virtual machines are running, you can then open the web pages hosted by the appropriate VM’s by typing in the following into the url bar:
 
 Clientserver can be accessed via localhost:8080/
 
@@ -24,3 +24,4 @@ The initial website, hosted by webserver, shows a booking form where you can inp
 adminserver can be accessed via localhost:8080/
 
 The second web page, hosted by adminserver, is a simple table that displays the current bookings in the database. It shows you the results of the inserted data, as well as some preloaded bookings that have been added to the database when the VM is started.
+
